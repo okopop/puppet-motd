@@ -1,0 +1,15 @@
+# Use default_module_facts.yml for module specific facts.
+#
+# Facts specified here will override the values provided by rspec-puppet-facts.
+---
+networking:
+  ip: "172.16.254.254"
+  ip6: "FE80:0000:0000:0000:AAAA:AAAA:AAAA"
+  mac: "AA:AA:AA:AA:AA:AA"
+is_pe: false
+fqdn: "testhest.example.com"
+virtual: vmware
+processorcount: 2
+memorysize: "3.64 GiB"
+aio_agent_version: "7.18.0"
+motd_last_reboot: "2022-01-01 13:37"

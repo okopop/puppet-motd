@@ -1,0 +1,9 @@
+==================== Motd by Puppet ====================
+Hostname...........: <%= $fqdn %>
+Platform...........: <%= $virtual %>, <%= $processorcount %> CPU, <%= $memorysize %> RAM
+Puppet Agent.......: <%= $aio_agent_version %>
+Last reboot........: <%= $motd_last_reboot %>
+<% if $motd::info { -%>
+Information........: <%= $motd::info %>
+<% } -%>
+========================================================
