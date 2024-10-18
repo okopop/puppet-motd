@@ -5,6 +5,7 @@
   "summary": "A basic motd, keep it simple",
   "license": "Apache-2.0",
   "source": "https://github.com/okopop/puppet-motd",
+  "tags": ["motd"],
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
