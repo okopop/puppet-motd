@@ -1,7 +1,7 @@
-==================== Motd by Puppet ====================
+==================== Motd by Puppet ==============================
 Hostname...........: <%= $facts['networking']['fqdn'] %>
 Platform...........: <%= $facts['virtual'] %>, <%= $facts['processors']['count'] %> CPU, <%= $facts['memory']['system']['total'] %> RAM
-Operatingsystem....: <%= $facts['os']['name'] %> <%= $facts['os']['release']['full']  %>
+Operatingsystem....: <%= $facts['os']['distro']['description'] %>
 <% if $facts['aio_agent_version'] { -%>
 Puppet Agent.......: <%= $facts['aio_agent_version'] %>
 <% } -%>
@@ -9,4 +9,4 @@ Last reboot........: <%= $motd_last_reboot %>
 <% if $motd::info { -%>
 Information........: <%= $motd::info %>
 <% } -%>
-========================================================
+==================================================================

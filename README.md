@@ -23,12 +23,12 @@ motd::info: "this server does xyz"
 ## Example
 
 ```
-==================== Motd by Puppet ====================
+==================== Motd by Puppet ==============================
 Hostname...........: testhest.example.com
 Platform...........: vmware, 2 CPU, 3.47 GiB RAM
-Operatingsystem....: RedHat 8.10
+Operatingsystem....: Red Hat Enterprise Linux release 8.10 (Ootpa)
 Puppet Agent.......: 7.18.0
 Last reboot........: 2024-10-19 01:22
 Information........: this server does xyz
-========================================================
+==================================================================
 ```
