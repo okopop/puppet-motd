@@ -1,6 +1,6 @@
 {
   "name": "okopop-motd",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "okopop",
   "summary": "Template based /etc/motd which shows only the most crucial info about the server.",
   "license": "Apache-2.0",
@@ -8,12 +8,7 @@
   "project_page": "https://github.com/okopop/puppet-motd",
   "issues_url": "https://github.com/okopop/puppet-motd/issues",
   "tags": ["motd"],
-  "dependencies": [
-    {
-      "name": "puppetlabs/stdlib",
-      "version_requirement": ">= 7.0.0 < 10.0.0"
-    }
-  ],
+  "dependencies": [],
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",

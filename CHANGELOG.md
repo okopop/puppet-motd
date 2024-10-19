@@ -2,10 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
-## Release 1.1.0
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-Use fact for puppet agent version that work on Ubuntu
+## [1.0.1]
 
-## Release 1.0.0
+### Fixed
+- Use puppet agent version fact that works on Ubuntu
+### Removed
+- Remove unused puppetlabs/stdlib dependency
+
+## [1.0.0]
 
 First release
