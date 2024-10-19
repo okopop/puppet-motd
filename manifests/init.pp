@@ -1,4 +1,4 @@
-# @summary motd kiss
+# @summary motd
 #
 # @example
 #   include motd
