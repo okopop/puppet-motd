@@ -28,6 +28,7 @@ The following parameters are available in the `motd` class:
 
 * [`ensure`](#-motd--ensure)
 * [`info`](#-motd--info)
+* [`warn`](#-motd--warn)
 
 ##### <a name="-motd--ensure"></a>`ensure`
 
@@ -42,6 +43,14 @@ Default value: `'present'`
 Data type: `Optional[String]`
 
 Set information message from hiera
+
+Default value: `undef`
+
+##### <a name="-motd--warn"></a>`warn`
+
+Data type: `Optional[String]`
+
+Set warning message from hiera
 
 Default value: `undef`
 

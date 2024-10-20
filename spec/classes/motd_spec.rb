@@ -28,9 +28,14 @@ describe 'motd' do
         # The binding of Hiera data to class parameters is a function of the Puppet core, not of your classes, so you should
         # not consider it in scope for your testing. Once you recognize that, you should also recognize that any means of
         # assigning the wanted class parameter values will do the job. It doesn't have to be Hiera. https://stackoverflow.com/a/73655477
-        let(:params) { { 'info' => 'Product X | Team Y' } }
+        let(:params) { { 'info' => 'Product X | Production | Team Y' } }
 
-        it { is_expected.to contain_file('/etc/motd').with_content(%r{Information......: Product X | Team Y}) }
+        it { is_expected.to contain_file('/etc/motd').with_content(%r{Information......: Product X | Production | Team Y}) }
+      end
+      context 'with class parameter warn set' do
+        let(:params) { { 'warn' => 'This OS version is EOL since XX-YY-ZZ' } }
+
+        it { is_expected.to contain_file('/etc/motd').with_content(%r{WARNING..........: This OS version is EOL since XX-YY-ZZ}) }
       end
     end
   end

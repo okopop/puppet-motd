@@ -7,4 +7,7 @@ Last reboot......: <%= $motd_last_reboot %>
 <% if $motd::info { -%>
 Information......: <%= $motd::info %>
 <% } -%>
+<% if $motd::warn { -%>
+WARNING..........: <%= $motd::warn %>
+<% } -%>
 ================================================================
