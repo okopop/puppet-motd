@@ -1,3 +1,10 @@
+[![Puppet Forge version](https://img.shields.io/puppetforge/v/okopop/motd)](https://forge.puppet.com/modules/okopop/motd)
+[![Puppet Forge - PDK version](https://img.shields.io/puppetforge/pdk-version/okopop/motd)](https://forge.puppet.com/modules/okopop/motd)
+[![Puppet Forge quality score](https://img.shields.io/puppetforge/qualityscore/okopop/motd)](https://forge.puppet.com/modules/okopop/motd)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/okopop/puppet-motd/pdk.yml)](https://github.com/okopop/puppet-motd/actions/workflows/pdk.yml)
+
+
+
 # motd
 Template based /etc/motd which shows only the most crucial info about the server.
 The ambition is to keep this module simple but relevant and not add values that change often.
@@ -34,6 +41,3 @@ Information......: Product X | Production | Team Y
 WARNING..........: This OS version is EOL since XX-YY-ZZ
 ================================================================
 ```
-
-# Available at Puppet Forge
-https://forge.puppet.com/modules/okopop/motd/readme
