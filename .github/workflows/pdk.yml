@@ -1,0 +1,30 @@
+name: pdk
+on:
+  - push
+  - pull_request
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: validate puppet 7
+        uses: okopop/pdk@pdk-3.3.0
+        with:
+          action: 'validate --puppet-version=7'
+
+      - name: unit test puppet 7
+        uses: okopop/pdk@pdk-3.3.0
+        with:
+          action: 'test unit --puppet-version=7'
+
+      - name: validate puppet 8
+        uses: okopop/pdk@pdk-3.3.0
+        with:
+          action: 'validate --puppet-version=8'
+
+      - name: unit test puppet 8
+        uses: okopop/pdk@pdk-3.3.0
+        with:
+          action: 'test unit --puppet-version=8'
