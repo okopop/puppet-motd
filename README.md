@@ -34,7 +34,7 @@ motd::warn: "This OS version is EOL since XX-YY-ZZ"
 ================== Motd by Puppet ==============================
 Hostname.........: testhest.example.com
 Platform.........: vmware, 2 CPU, 3.47 GiB RAM
-Operatingsystem..: Red Hat Enterprise Linux release 8.10 (Ootpa)
+Operating System.: Red Hat Enterprise Linux release 8.10 (Ootpa)
 Puppet Agent.....: 7.18.0
 Last reboot......: 2024-10-19 01:22
 Information......: Product X | Production | Team Y

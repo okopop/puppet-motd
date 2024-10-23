@@ -1,7 +1,7 @@
 ================== Motd by Puppet ==============================
 Hostname.........: <%= $facts['networking']['fqdn'] %>
 Platform.........: <%= $facts['virtual'] %>, <%= $facts['processors']['count'] %> CPU, <%= $facts['memory']['system']['total'] %> RAM
-Operatingsystem..: <%= $facts['os']['distro']['description'] %>
+Operating System.: <%= $facts['os']['distro']['description'] %>
 Puppet Agent.....: <%= $facts['puppetversion'] %>
 Last reboot......: <%= $motd_last_reboot %>
 <% if $motd::info { -%>

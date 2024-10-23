@@ -20,7 +20,7 @@ describe 'motd' do
       context 'with default_facts.yml' do
         it { is_expected.to contain_file('/etc/motd').with_content(%r{Hostname.........: testhest.example.com}) }
         it { is_expected.to contain_file('/etc/motd').with_content(%r{Platform.........: vmware, 2 CPU, 3.64 GiB RAM}) }
-        it { is_expected.to contain_file('/etc/motd').with_content(%r{Operatingsystem..: }) }
+        it { is_expected.to contain_file('/etc/motd').with_content(%r{Operating System.: }) }
         it { is_expected.to contain_file('/etc/motd').with_content(%r{Puppet Agent.....: 7.18.0}) }
         it { is_expected.to contain_file('/etc/motd').with_content(%r{Last reboot......: \d{4}-\d{2}-\d{2}\s\d{2}:\d{2}}) }
       end
