@@ -3,7 +3,7 @@ Hostname.........: <%= $facts['networking']['fqdn'] %>
 Platform.........: <%= $facts['virtual'] %>, <%= $facts['processors']['count'] %> CPU, <%= $facts['memory']['system']['total'] %> RAM
 Operating System.: <%= $facts['os']['distro']['description'] %>
 Puppet Agent.....: <%= $facts['puppetversion'] %>
-Last reboot......: <%= $motd_last_reboot %>
+Last reboot......: <%= $facts['motd_last_reboot'] %>
 <% if $motd::info { -%>
 Information......: <%= $motd::info %>
 <% } -%>
