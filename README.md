@@ -16,11 +16,14 @@
 
 ## Overview
 
-This module creates a /etc/motd file.
-It shows the most relevant info about the server by default and you can add your own
-messages as either Information or WARNING when needed.
+Show the most relevant server information in /etc/motd
 
 ## Module description
+
+This module creates a /etc/motd file.
+It shows the most relevant information about the server by default and you can add your own
+messages as either Information or WARNING when needed.
+The content displayed from this module in motd is a good foundation for all servers out there.
 
 This module is templated based and does the following:
 
