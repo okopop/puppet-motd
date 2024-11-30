@@ -3,32 +3,59 @@
 [![Puppet Forge quality score](https://img.shields.io/puppetforge/qualityscore/okopop/motd)](https://forge.puppet.com/modules/okopop/motd)
 [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/okopop/puppet-motd/pdk.yml)](https://github.com/okopop/puppet-motd/actions/workflows/pdk.yml)
 
-
-
 # motd
-Template based /etc/motd which shows only the most crucial info about the server.
-The ambition is to keep this module simple but relevant and not add values that change often.
-I have not tested on all different distros myself but should work if you have normal facter values and the uptime --since command.
-Feel free to contribute!
+
+#### Table of Contents
+
+1. [Overview](#overview)
+1. [Module Description](#module-description)
+1. [Setup - The basics of getting started](#setup)
+1. [Usage - Configuration options](#usage)
+1. [Example output](#example)
+1. [Development - Guide for contributing to the module](#development)
+
+## Overview
+
+This module creates a /etc/motd file.
+It shows the most relevant info about the server by default and you can add your own
+messages as either Information or WARNING when needed.
+
+## Module description
+
+This module is templated based and does the following:
 
 - Show a simple server summary.
-- Add custom server information with hiera.
+- Add information message with hiera.
 - Add warning message with hiera, when you want to get an important message out to the users that log in.
-- 'Last reboot' is a more static value than showing number of days uptime, which create unnecessary change noise everyday.
-The value could be used to get a hint when a server most likely got updated and rebooted, or if the server is forgotten because of high uptime and need some attention.
+- Show when server was last rebooted. The value 'Last reboot' is very static and is a better option than showing uptime in days, which create unnecessary change noise every day.
+The value could be used to get a hint when a server most likely was patched and rebooted, or if the server is forgotten because of high uptime and need some attention.
 
-## Hiera example
+## Setup
+
+Any of these will include motd to the catalog and create the /etc/motd file with default values from facts.
+
+```puppet
+include motd
+
+```
+or hiera
 
 ```yaml
 ---
 classes:
   - motd
+```
 
+## Usage
+
+Add your own messages with hiera to be displayed in /etc/motd
+
+```yaml
 motd::info: "Product X | Production | Team Y"
 motd::warn: "This OS version is EOL since XX-YY-ZZ"
 ```
 
-## Motd example
+## Example
 
 ```
 ================== Motd by Puppet ==============================
@@ -41,3 +68,10 @@ Information......: Product X | Production | Team Y
 WARNING..........: This OS version is EOL since XX-YY-ZZ
 ================================================================
 ```
+
+## Development
+
+The ambition is to keep the motd file short and simple and not add values that change often.
+I have not tested on all different distros myself but should work if you have normal fact values.
+
+Feel free to contribute with ideas!
