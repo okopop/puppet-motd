@@ -39,7 +39,6 @@ Any of these will include motd to the catalog and create the /etc/motd file with
 
 ```puppet
 include motd
-
 ```
 or hiera
 
